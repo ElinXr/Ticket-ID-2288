@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace YourProject.Models
+namespace Project.Models
 {
     public class Admin
     {

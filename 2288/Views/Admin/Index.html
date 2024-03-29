@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admins</title>
+</head>
+<body>
+
+<h1>Admins</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($admins as $admin): ?>
+        <tr>
+            <td><?= $admin['id'] ?></td>
+            <td><?= $admin['username'] ?></td>
+            <td><?= $admin['email'] ?></td>
+            <td>
+                <a href="/admin/edit/<?= $admin['id'] ?>" class="btn btn-primary">Edit</a>
+                <a href="/admin/delete/<?= $admin['id'] ?>" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+<a href="/admin/create" class="btn btn-success">Add Admin</a>
+
+</body>
+</html>
+

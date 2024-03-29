@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
-using YourProject.Models;
+using Project.Models;
 
-namespace YourProject.Controllers
+namespace Project.Controllers
 {
     [Authorize] // Ограничава достъпа до контролера само за оторизирани потребители
     public class AdminController : Controller

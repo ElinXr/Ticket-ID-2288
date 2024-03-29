@@ -1,1 +1,21 @@
 
+@model YourProject.Models.MyModel
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Property1)
+        @Html.EditorFor(model => model.Property1)
+        @Html.ValidationMessageFor(model => model.Property1)
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Property2)
+        @Html.EditorFor(model => model.Property2)
+        @Html.ValidationMessageFor(model => model.Property2)
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Запазване</button>
+}

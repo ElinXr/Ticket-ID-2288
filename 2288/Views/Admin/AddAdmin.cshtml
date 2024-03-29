@@ -1,1 +1,24 @@
 
+@model YourProject.Models.Admin
+
+@{
+    ViewBag.Title = "Добавяне на администратор";
+}
+
+<h2>Добавяне на администратор</h2>
+
+<form method="post" action="@Url.Action("AddAdmin")">
+    <div class="form-group">
+        <label for="Username">Потребителско име:</label>
+        <input type="text" class="form-control" id="Username" name="Username" />
+    </div>
+    <div class="form-group">
+        <label for="Password">Парола:</label>
+        <input type="password" class="form-control" id="Password" name="Password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Добавяне</button>
+</form>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
